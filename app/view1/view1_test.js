@@ -9,9 +9,6 @@ describe('myApp.view1 module', function() {
     beforeEach(inject(function($rootScope, $controller, $httpBackend) {
         scope = $rootScope.$new();
         controller = $controller;
-        /*$controller("View1Ctrl", {
-            $scope: scope
-        });*/
         httpBackend = $httpBackend;
     }));
 
