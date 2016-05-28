@@ -28,3 +28,5 @@ Now browse to the app at http://localhost:8000/app/index.html
 To Run unit test cases, run :
 
 npm test
+
+Test cases can be launched against a browser (eg. Chrome), or against PhantomJS (headless browser).
