@@ -10,8 +10,8 @@ Download npm from http://nodejs.org/
 
 Clone this project using git:
 
-git clone https://github.com/angular/angular-seed.git
-cd angular-seed
+git clone https://github.com/ramit21/angular-jasmine-poc.git
+cd angular-jasmine-poc
 
 Run npm install to download dependencies. 
 
