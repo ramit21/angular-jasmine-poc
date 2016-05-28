@@ -17,6 +17,7 @@ angular.module('myApp.view1', ['ngRoute'])
 	        url : 'http://localhost:8000/'
 	    }).then(function mySucces(response) {
 	        $scope.myWelcome = response.statusText;
+	        $scope.httpStatus = response.status;
 	    }, function myError(response) {
 	        $scope.myWelcome = response.statusText;
 	    });

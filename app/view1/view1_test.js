@@ -28,7 +28,19 @@ describe('myApp.view1 module', function() {
         expect(scope.var).toBe(100);
      });
 
-    xit("http success", function() {
+    it("http success", function() {
+      var httpResponse = { "statusText": "OK" };
+      httpBackend.expectGET("http://localhost:8000/").respond(200, httpResponse);
+      var view1Ctrl = controller('View1Ctrl',{$scope: scope});
+      httpBackend.flush();
+      expect(scope.httpStatus).toBe(200);
+    });
+
+    it("http failure", function() {
+      httpBackend.expectGET("http://localhost:8000/").respond(400);
+      var view1Ctrl = controller('View1Ctrl',{$scope: scope});
+      httpBackend.flush();
+      expect(scope.httpStatus).toBeUndefined();
     });
 
   });
