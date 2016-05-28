@@ -22,13 +22,19 @@ module.exports = function(config){
             'karma-firefox-launcher',
             'karma-phantomjs-launcher',
             'karma-jasmine',
+            'karma-coverage',
             'karma-junit-reporter'
             ],
 
-    junitReporter : {
-      outputFile: 'test_out/unit.xml',
-      suite: 'unit'
-    }
+    //generating coverage report        
+    preprocessors : {
+     'app/**/*.js': 'coverage'
+    },
+    reporters : ['progress','coverage'],
+    coverageReporter : {
+      type : 'html',
+      dir : 'coverage/'
+    },
 
   });
 };
