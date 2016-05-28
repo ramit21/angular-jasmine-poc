@@ -1,4 +1,4 @@
-#"angular-jasmine-poc" 
+#angular-jasmine-poc
 
 POC app based on angular-js, and JAsmine unit testing framework.
 
