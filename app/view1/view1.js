@@ -21,4 +21,12 @@ angular.module('myApp.view1', ['ngRoute'])
 	    }, function myError(response) {
 	        $scope.myWelcome = response.statusText;
 	    });
+
+	    $scope.buttonClick = function(input){
+	    	$scope.squareVal = $scope.square(input);
+	    }
+
+	    $scope.square = function(input){
+	    	return input*input;
+	    }
 }]);

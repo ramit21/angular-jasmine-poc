@@ -43,5 +43,21 @@ describe('myApp.view1 module', function() {
       expect(scope.httpStatus).toBeUndefined();
     });
 
+    it("mock with spy-on", function() {
+        var view1Ctrl = controller('View1Ctrl',{$scope: scope});
+        spyOn(scope ,'square');
+        scope.buttonClick(6);
+        expect(scope.square).toHaveBeenCalled();
+        expect(scope.squareVal).toBeUndefined();
+     });
+
+    it("spy-on with actual call", function() {
+        var view1Ctrl = controller('View1Ctrl',{$scope: scope});
+        spyOn(scope ,'square').and.callThrough();
+        scope.buttonClick(6);
+        expect(scope.square).toHaveBeenCalled();
+        expect(scope.squareVal).toBe(36);
+     });
+
   });
 });
