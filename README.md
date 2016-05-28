@@ -1,11 +1,13 @@
-"# angular-jasmine-poc" 
+#"angular-jasmine-poc" 
 
 POC app based on angular-js, and JAsmine unit testing framework.
 
 Steps to install and start app:
 
 Download git from http://git-scm.com/
+
 Download npm from http://nodejs.org/
+
 Clone this project using git:
 
 git clone https://github.com/angular/angular-seed.git
